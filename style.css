@@ -1,3 +1,148 @@
 :root {
   font-size: 20px;
 }
+
+body {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+/*PROPIEDADES COMPARTIDAS*/
+.item {
+  position: relative;
+  /*border: 0.5px black solid;*/
+  margin: 1px;
+}
+
+/*PROPIEDADES DEL CONTENEDOR*/
+#container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/*----SECTION SIZE-----*/
+.section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+/*---TITLE PROPERTIES---*/
+.title {
+  width: 100%;
+  height: 35%;
+  text-align: center;
+  align-self: flex-start;
+  font-size: 2.5rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.title > a {
+  text-decoration: none;
+  color: #fff;
+}
+/*MEDIA QUERIES: TITLE*/
+@media (max-width: 700px) {
+  .title {
+    font-size: 1.2rem;
+  }
+}
+
+/*-----PAINTING PROPERTIES----*/
+/*-----MODELOS DE MUESTRA----*/
+.painting {
+  width: 19.2%;
+  height: 60%;
+  padding: 0;
+}
+
+.three_paintings {
+  width: 32.8%;
+  height: 63%;
+  padding: 0;
+}
+
+/*PROPIEDADES DE LAS IMAGENES*/
+img {
+  object-fit: cover;
+}
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+/*ENCABEZADO SECCION PICASSO*/
+#picasso_section {
+  background: url(https://www.aulafacil.com/uploads/cursos/560/editor/cabecera_guernica.es.jpg);
+  font-family: "ZCOOL KuaiLe", cursive;
+  color: #fff;
+}
+
+/*ENCABEZADO SECCION VAN GOGH*/
+#vangogh_section {
+  background: url(https://historia.nationalgeographic.com.es/medio/2020/10/13/trigal-con-cuervos-vincent-van-gogh-1890_d07a7c1a_1200x630.jpg);
+  font-family: "Baloo 2", cursive;
+}
+
+/*ENCABEZADO SECCION MONET*/
+#monet_section {
+  background: url(https://mymodernmet.com/wp/wp-content/uploads/2017/06/monet-paintings-the-japanese-bridge-1899.jpg);
+  font-family: "Satisfy", cursive;
+}
+/*ENCABEZADO SECCION RENOIR*/
+#renoir_section {
+  background: url(https://es.wahooart.com/A55A04/w.nsf/O/BRUE-8EWQBA/$File/Pierre-Auguste-Renoir-Still-Life-with-Strawberries.jpg);
+  font-family: "Dancing Script", cursive;
+}
+#renoir_section a {
+  color: #422c04;
+}
+
+/*ENCABEZADO SECCION KLIMPT*/
+#klimpt_section {
+  background: url(https://www.artmajeur.com/medias/standard/c/b/cbaud/artwork/13492415_cbaud-klimt.jpg?v=1595266260);
+  font-family: "Limelight", cursive;
+}
+#klimpt_section a {
+  text-decoration: none;
+  color: #000;
+}
+
+/*ENCABEZADO SECCION CARAVAGGIO*/
+#caravaggio_section {
+  background: url(https://cnnespanol.cnn.com/wp-content/uploads/2019/02/caravaggio-judith-and-holofernes-1.jpg?quality=100&strip=info);
+  font-family: "Great Vibes", cursive;
+}
+#caravaggio_section a {
+  text-decoration: none;
+  color: #d10603;
+}
+
+/* SECCION DALI*/
+#dali_section {
+  background: url(https://historia-arte.com/_/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbSI6WyJcL2FydHdvcmtcL2ltYWdlRmlsZVwvNWRmNjQ3ODY5YzVmMS5qcGciLCJyZXNpemUsMjAwMCwyMDAwIl19.VQkVt7WlbuVds2PcFgj-X059Puf_krZXBfjSmsY5bQs.jpg);
+  font-family: "Sacramento", cursive;
+}
+#dali_section a {
+  color: #e3fc03;
+}
+
+/*SECCION WARHOL*/
+#warhol_section {
+  background: url(https://www.lateliercanson.es/sites/default/files/HistArt_-_Ins_-_Andy_Warohl_V2.jpg);
+  font-family: "Sigmar One", cursive;
+}
