@@ -79,12 +79,19 @@ body {
 /*PROPIEDADES DE LAS IMAGENES*/
 img {
   object-fit: cover;
+  display: block;
+  position: relative;
 }
 .image {
   width: 100%;
   height: 100%;
 }
 
+img.image:hover {
+  transform: scale(1.5);
+  z-index: 5;
+  margin: auto;
+}
 /*ENCABEZADO SECCION PICASSO*/
 #picasso_section {
   background: url(https://www.aulafacil.com/uploads/cursos/560/editor/cabecera_guernica.es.jpg);
