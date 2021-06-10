@@ -41,7 +41,7 @@ body {
   margin: 5px auto;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   background-color: #f0f0f0;
 }
@@ -72,27 +72,40 @@ body {
 /*-----PAINTING PROPERTIES----*/
 /*-----MODELOS DE MUESTRA----*/
 .painting {
-  width: 18.2%;
+  width: 19.2%;
   height: 50%;
   padding: 0;
-  transition: all ease 1s;
+  transition: transform ease 1s;
+}
+
+.left_growth {
+  transform-origin: left bottom;
+}
+
+.center_growth {
+  transform-origin: bottom;
+}
+
+.right_growth {
+  transform-origin: right bottom;
 }
 
 .painting:hover {
-  transform: scale(1.3, 1.3);
+  transform: scale(1.5, 1.5);
   z-index: 5;
-  transition: all ease 1s;
+  transition: ease 1s;
+  filter: grayscale(100%) blur(1px);
 }
 
 .three_paintings {
-  width: 28%;
+  width: 30%;
   height: 60%;
   padding: 0;
   transition: all ease 1s;
 }
 
 .three_paintings:hover {
-  transform: scale(1.5, 1.5);
+  transform: scale(1.4, 1.4);
   z-index: 5;
   transition: all ease 1s;
 }
