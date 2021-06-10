@@ -1,15 +1,16 @@
 :root {
   font-size: 20px;
 }
-
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   position: relative;
   display: block;
   max-width: 100%;
   height: auto;
-  margin: 0;
-  padding: 0;
-  background: #f0f0f0;
 }
 
 /*PROPIEDADES COMPARTIDAS*/
@@ -28,16 +29,21 @@ body {
   height: auto;
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
+  z-index: 1;
+  background: linear-gradient(145deg, #bdc3c7 5%, #2c3e50 95%); /*#f0f0f0;*/
 }
 
 /*----SECTION SIZE-----*/
 .section {
-  width: 100%;
+  width: 95%;
   height: 98vh;
+  margin: 5px auto;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
 }
 
 /*---TITLE PROPERTIES---*/
@@ -45,7 +51,7 @@ body {
   width: 98%;
   height: 35%;
   text-align: center;
-  align-self: flex-start;
+  align-self: center;
   font-size: 2.5rem;
   display: flex;
   flex-flow: row wrap;
@@ -66,15 +72,29 @@ body {
 /*-----PAINTING PROPERTIES----*/
 /*-----MODELOS DE MUESTRA----*/
 .painting {
-  width: 19.2%;
-  height: 60%;
+  width: 18.2%;
+  height: 50%;
   padding: 0;
+  transition: all ease 1s;
+}
+
+.painting:hover {
+  transform: scale(1.3, 1.3);
+  z-index: 5;
+  transition: all ease 1s;
 }
 
 .three_paintings {
-  width: 31.8%;
-  height: 63%;
+  width: 28%;
+  height: 60%;
   padding: 0;
+  transition: all ease 1s;
+}
+
+.three_paintings:hover {
+  transform: scale(1.5, 1.5);
+  z-index: 5;
+  transition: all ease 1s;
 }
 
 /*PROPIEDADES DE LAS IMAGENES*/
@@ -88,11 +108,11 @@ img {
   height: 100%;
 }
 
-img.image:hover {
+/*img.image:hover {
   transform: scale(1.3);
   z-index: 5;
   margin: auto;
-}
+}*/
 /*ENCABEZADO SECCION PICASSO*/
 #picasso_section {
   background: url(https://www.aulafacil.com/uploads/cursos/560/editor/cabecera_guernica.es.jpg);
