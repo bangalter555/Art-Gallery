@@ -1,11 +1,16 @@
 :root {
   font-size: 20px;
+  --base-background-color: #fbfaf4;
 }
-* {
+
+*,
+::before,
+::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 body {
   position: relative;
   display: block;
@@ -17,14 +22,12 @@ body {
 .item {
   position: relative;
   /*border: 0.5px black solid;*/
-  margin: 1px;
+  /*margin: 1px;*/
   box-shadow: 2px 2px 10px #666;
 }
 
 /*PROPIEDADES DEL CONTENEDOR*/
 #container {
-  margin: 0;
-  padding: 0;
   width: 100%;
   height: auto;
   display: flex;
@@ -36,78 +39,18 @@ body {
 
 /*----SECTION SIZE-----*/
 .section {
-  width: 95%;
-  height: 98vh;
-  margin: 5px auto;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #f0f0f0;
-}
-
-/*---TITLE PROPERTIES---*/
-.title {
   width: 98%;
-  height: 35%;
-  text-align: center;
-  align-self: center;
-  font-size: 2.5rem;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-}
-.title > a {
-  text-decoration: none;
-  color: #fff;
-}
-/*MEDIA QUERIES: TITLE*/
-@media (max-width: 700px) {
-  .title {
-    font-size: 1.2rem;
-  }
+  height: auto;
+  margin: 5px auto;
+  display: grid;
+  background-color: var(--base-background-color);
 }
 
 /*-----PAINTING PROPERTIES----*/
 /*-----MODELOS DE MUESTRA----*/
 .painting {
-  width: 19.2%;
-  height: 50%;
   padding: 0;
   transition: transform ease 1s;
-}
-
-.left_growth {
-  transform-origin: left bottom;
-}
-
-.center_growth {
-  transform-origin: bottom;
-}
-
-.right_growth {
-  transform-origin: right bottom;
-}
-
-.painting:hover {
-  transform: scale(1.5, 1.5);
-  z-index: 5;
-  transition: ease 1s;
-  filter: grayscale(100%) blur(1px);
-}
-
-.three_paintings {
-  width: 30%;
-  height: 60%;
-  padding: 0;
-  transition: all ease 1s;
-}
-
-.three_paintings:hover {
-  transform: scale(1.4, 1.4);
-  z-index: 5;
-  transition: all ease 1s;
 }
 
 /*PROPIEDADES DE LAS IMAGENES*/
@@ -121,69 +64,301 @@ img {
   height: 100%;
 }
 
-/*img.image:hover {
-  transform: scale(1.3);
-  z-index: 5;
-  margin: auto;
-}*/
-/*ENCABEZADO SECCION PICASSO*/
-#picasso_section {
-  background: url(https://www.aulafacil.com/uploads/cursos/560/editor/cabecera_guernica.es.jpg);
-  font-family: "ZCOOL KuaiLe", cursive;
+/*WELCOME SECTION*/
+#welcome {
+  height: 100vh;
+  width: 100%;
+  background-color: #2c3e50;
+  display: flex;
+  justify-content: center;
+  align-items: center; /*or margin: auto*/
+  animation: intro 1s ease-in forwards;
+}
+
+#welcome > h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+  color: #ffebcd;
+  opacity: 0;
+  animation: intro 1s ease-in 1.8s forwards;
+}
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*-----PICASSO SECTION--------*/
+.picasso_section {
+  grid-template-rows: repeat(4, 100vh);
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "pic-1 pic-1"
+    "pic-2 pic-3"
+    "pic-4 pic-5"
+    "pic-6 pic-6";
+  justify-items: center;
+  align-items: center;
   color: #fff;
 }
 
-/*ENCABEZADO SECCION VAN GOGH*/
-#vangogh_section {
-  background: url(https://historia.nationalgeographic.com.es/medio/2020/10/13/trigal-con-cuervos-vincent-van-gogh-1890_d07a7c1a_1200x630.jpg);
-  font-family: "Baloo 2", cursive;
+#guernica {
+  grid-area: pic-1;
+  width: 95%;
 }
 
-/*ENCABEZADO SECCION MONET*/
-#monet_section {
-  background: url(https://mymodernmet.com/wp/wp-content/uploads/2017/06/monet-paintings-the-japanese-bridge-1899.jpg);
-  font-family: "Satisfy", cursive;
-}
-/*ENCABEZADO SECCION RENOIR*/
-#renoir_section {
-  background: url(https://es.wahooart.com/A55A04/w.nsf/O/BRUE-8EWQBA/$File/Pierre-Auguste-Renoir-Still-Life-with-Strawberries.jpg);
-  font-family: "Dancing Script", cursive;
-}
-#renoir_section a {
-  color: #422c04;
+#la_tragedia {
+  grid-area: pic-2;
+  width: 60%;
+  height: 90%;
 }
 
-/*ENCABEZADO SECCION KLIMPT*/
-#klimpt_section {
-  background: url(https://www.artmajeur.com/medias/standard/c/b/cbaud/artwork/13492415_cbaud-klimt.jpg?v=1595266260);
-  font-family: "Limelight", cursive;
-}
-#klimpt_section a {
-  text-decoration: none;
-  color: #000;
+#mujer_que_llora {
+  grid-area: pic-3;
+  width: 70%;
+  height: 90%;
 }
 
-/*ENCABEZADO SECCION CARAVAGGIO*/
-#caravaggio_section {
-  background: url(https://cnnespanol.cnn.com/wp-content/uploads/2019/02/caravaggio-judith-and-holofernes-1.jpg?quality=100&strip=info);
-  font-family: "Great Vibes", cursive;
-}
-#caravaggio_section a {
-  text-decoration: none;
-  color: #d10603;
+#mujer_cuello_armiño {
+  grid-area: pic-4;
+  width: 80%;
+  height: 90%;
 }
 
-/* SECCION DALI*/
-#dali_section {
-  background: url(https://historia-arte.com/_/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpbSI6WyJcL2FydHdvcmtcL2ltYWdlRmlsZVwvNWRmNjQ3ODY5YzVmMS5qcGciLCJyZXNpemUsMjAwMCwyMDAwIl19.VQkVt7WlbuVds2PcFgj-X059Puf_krZXBfjSmsY5bQs.jpg);
-  font-family: "Sacramento", cursive;
-}
-#dali_section a {
-  color: #e3fc03;
+#mujer_espejo {
+  grid-area: pic-5;
+  width: 70%;
+  height: 90%;
 }
 
-/*SECCION WARHOL*/
-#warhol_section {
-  background: url(https://www.lateliercanson.es/sites/default/files/HistArt_-_Ins_-_Andy_Warohl_V2.jpg);
-  font-family: "Sigmar One", cursive;
+#masacre_corea {
+  grid-area: pic-6;
+  width: 95%;
+  height: 95%;
+}
+
+/*----VAN GOGH SECTION----*/
+.vangogh_section {
+  grid-template-rows: repeat(2, 100vh 110vh);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "pic-1 pic-2"
+    "pic-3 pic-3"
+    "pic-4 pic-5"
+    "pic-6 pic-6";
+  justify-items: center;
+  align-items: center;
+}
+
+#terraza {
+  grid-area: pic-1;
+  width: 80%;
+  height: 95%;
+}
+#las_sillas {
+  grid-area: pic-2;
+  width: 45%;
+  height: 75%;
+}
+
+#noche_rodano {
+  grid-area: pic-3;
+  height: 90%;
+  width: 65%;
+}
+
+#noche_rodano > img.image,
+#noche_estrellada > img.image {
+  object-fit: cover contain;
+}
+
+#autoretrato {
+  grid-area: pic-4;
+  height: 90%;
+  width: 70%;
+}
+
+#autoretrato_2 {
+  grid-area: pic-5;
+  height: 90%;
+  width: 70%;
+}
+
+#noche_estrellada {
+  grid-area: pic-6;
+  height: 90%;
+  width: 65%;
+}
+
+/*----MONET SECTION----*/
+.monet_section {
+  grid-template-rows: repeat(3, 60vh);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "pic-1 pic-2"
+    "pic-3 pic-3"
+    "pic-4 pic-5";
+  justify-items: center;
+  align-items: center;
+}
+
+#las_amapolas {
+  grid-area: pic-1;
+  width: 60%;
+  height: 80%;
+}
+#crepusculo {
+  grid-area: pic-2;
+  width: 60%;
+  height: 80%;
+}
+
+#impresion {
+  grid-area: pic-3;
+  width: 50%;
+  height: 90%;
+}
+
+#urraca {
+  grid-area: pic-4;
+  width: 60%;
+  height: 80%;
+}
+
+#etretat {
+  grid-area: pic-5;
+  width: 60%;
+  height: 80%;
+}
+
+/*---- RENOIR SECTION ----*/
+.renoir_section {
+  grid-template-rows: repeat(3, 90vh);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "pic-1 pic-2"
+    "pic-3 pic-4"
+    "pic-5 pic-5";
+  justify-items: center;
+  align-items: center;
+}
+
+#la_bohemienne {
+  grid-area: pic-1;
+  width: 50%;
+  height: 80%;
+}
+
+#retrato {
+  grid-area: pic-2;
+  width: 50%;
+  height: 80%;
+}
+
+#grenouillere {
+  grid-area: pic-4;
+  width: 90%;
+  height: 60%;
+}
+
+#remeros {
+  grid-area: pic-3;
+  width: 90%;
+  height: 80%;
+}
+
+#retrato_2 {
+  grid-area: pic-5;
+  width: 35%;
+  height: 96%;
+}
+
+/*----CARAVAGGIO SECTION----*/
+.caravaggio_section {
+  grid-template-rows: repeat(2, 50vh);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "pic-1 pic-2"
+    "pic-1 pic-3";
+  justify-items: center;
+  align-items: center;
+}
+
+#pintura-1 {
+  grid-area: pic-1;
+  width: 50%;
+  height: 90%;
+}
+#medusa {
+  grid-area: pic-2;
+  width: 55%;
+  height: 85%;
+}
+
+#prendimiento {
+  grid-area: pic-3;
+  width: 55%;
+  height: 85%;
+}
+
+/*--- DALI SECTION ---*/
+.dali_section {
+  grid-template-rows: repeat(2, 100vh);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "pic-1 pic-1"
+    "pic-2 pic-3";
+  justify-items: center;
+  align-items: center;
+}
+
+#persistencia_memoria {
+  grid-area: pic-1;
+  width: 60%;
+  height: 92%;
+}
+
+#san_antonio {
+  grid-area: pic-2;
+  width: 92%;
+  height: 92%;
+}
+
+#los_elefantes {
+  grid-area: pic-3;
+  width: 92%;
+  height: 92%;
+}
+
+/*--- WARHOL SECTION ---*/
+.warhol_section {
+  grid-template-rows: repeat(2, 70vh);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "pic-1 pic-2"
+    "pic-3 pic-3";
+  justify-items: center;
+  align-items: center;
+}
+
+#el_platano {
+  grid-area: pic-1;
+  width: 50%;
+  height: 90%;
+}
+
+#mao {
+  grid-area: pic-2;
+  width: 50%;
+  height: 95%;
+}
+
+#campbell {
+  grid-area: pic-3;
+  width: 50%;
+  height: 95%;
 }
