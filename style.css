@@ -16,6 +16,7 @@ body {
   display: block;
   max-width: 100%;
   height: auto;
+  overflow-x: hidden;
 }
 
 /*PROPIEDADES COMPARTIDAS*/
@@ -39,18 +40,12 @@ body {
 
 /*----SECTION SIZE-----*/
 .section {
+  position: relative;
   width: 98%;
   height: auto;
   margin: 5px auto;
   display: grid;
   background-color: var(--base-background-color);
-}
-
-/*-----PAINTING PROPERTIES----*/
-/*-----MODELOS DE MUESTRA----*/
-.painting {
-  padding: 0;
-  transition: transform ease 1s;
 }
 
 /*PROPIEDADES DE LAS IMAGENES*/
@@ -66,11 +61,12 @@ img {
 
 /*WELCOME SECTION*/
 #welcome {
+  z-index: 1;
   height: 100vh;
   width: 100%;
   background-color: #2c3e50;
   display: flex;
-  justify-content: center;
+  /*justify-content: center;
   align-items: center; /*or margin: auto*/
   animation: intro 1s ease-in forwards;
 }
@@ -80,7 +76,9 @@ img {
   font-size: 3rem;
   color: #ffebcd;
   opacity: 0;
-  animation: intro 1s ease-in 1.8s forwards;
+  animation: intro 1s ease-in 2.5s forwards;
+  margin: auto;
+  align-self: center;
 }
 
 @keyframes intro {
@@ -92,15 +90,74 @@ img {
   }
 }
 
+#navbar {
+  position: sticky;
+  z-index: 5;
+  top: 0;
+  left: -100px;
+  opacity: 0;
+  height: 100vh;
+  width: 15%;
+  background-color: #ffebcd;
+  color: #2c3e50;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+  animation: show-up 1s ease-in 1s forwards;
+}
+
+@keyframes show-up {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.navlink {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  animation: intro 1s ease-in 2.5s forwards;
+  opacity: 0;
+}
+a.navlink,
+a:visited {
+  text-decoration: none;
+  color: #2c3e50;
+  font-family: "Roboto", sans-serif;
+}
+
+.home_button {
+  grid-area: home;
+  width: 20%;
+  height: 90%;
+  background-color: #2c3e50;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+.home_button > a {
+  text-decoration: none;
+  color: #ffebcd;
+  font-family: "Roboto", sans-serif;
+  margin: auto;
+}
+
 /*-----PICASSO SECTION--------*/
 .picasso_section {
-  grid-template-rows: repeat(4, 100vh);
+  grid-template-rows: repeat(4, 100vh) 3rem;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "pic-1 pic-1"
     "pic-2 pic-3"
     "pic-4 pic-5"
-    "pic-6 pic-6";
+    "pic-6 pic-6"
+    "home home";
   justify-items: center;
   align-items: center;
   color: #fff;
@@ -143,13 +200,14 @@ img {
 
 /*----VAN GOGH SECTION----*/
 .vangogh_section {
-  grid-template-rows: repeat(2, 100vh 110vh);
+  grid-template-rows: repeat(2, 100vh 110vh) 3rem;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
     "pic-1 pic-2"
     "pic-3 pic-3"
     "pic-4 pic-5"
-    "pic-6 pic-6";
+    "pic-6 pic-6"
+    "home home";
   justify-items: center;
   align-items: center;
 }
@@ -196,12 +254,13 @@ img {
 
 /*----MONET SECTION----*/
 .monet_section {
-  grid-template-rows: repeat(3, 60vh);
+  grid-template-rows: repeat(3, 60vh) 3rem;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
     "pic-1 pic-2"
     "pic-3 pic-3"
-    "pic-4 pic-5";
+    "pic-4 pic-5"
+    "home home";
   justify-items: center;
   align-items: center;
 }
@@ -237,12 +296,13 @@ img {
 
 /*---- RENOIR SECTION ----*/
 .renoir_section {
-  grid-template-rows: repeat(3, 90vh);
+  grid-template-rows: repeat(3, 90vh) 3rem;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
     "pic-1 pic-2"
     "pic-3 pic-4"
-    "pic-5 pic-5";
+    "pic-5 pic-5"
+    "home home";
   justify-items: center;
   align-items: center;
 }
@@ -279,11 +339,12 @@ img {
 
 /*----CARAVAGGIO SECTION----*/
 .caravaggio_section {
-  grid-template-rows: repeat(2, 50vh);
+  grid-template-rows: repeat(2, 50vh) 3rem;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
     "pic-1 pic-2"
-    "pic-1 pic-3";
+    "pic-1 pic-3"
+    "home home";
   justify-items: center;
   align-items: center;
 }
@@ -307,11 +368,12 @@ img {
 
 /*--- DALI SECTION ---*/
 .dali_section {
-  grid-template-rows: repeat(2, 100vh);
+  grid-template-rows: repeat(2, 100vh) 3rem;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
     "pic-1 pic-1"
-    "pic-2 pic-3";
+    "pic-2 pic-3"
+    "home home";
   justify-items: center;
   align-items: center;
 }
@@ -336,11 +398,12 @@ img {
 
 /*--- WARHOL SECTION ---*/
 .warhol_section {
-  grid-template-rows: repeat(2, 70vh);
+  grid-template-rows: repeat(2, 70vh) 3rem;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
     "pic-1 pic-2"
-    "pic-3 pic-3";
+    "pic-3 pic-3"
+    "home home";
   justify-items: center;
   align-items: center;
 }
