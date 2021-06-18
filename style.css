@@ -41,22 +41,10 @@ body {
 /*----SECTION SIZE-----*/
 .section {
   position: relative;
-  width: 98%;
+  width: 100%;
   height: auto;
-  margin: 5px auto;
   display: grid;
   background-color: var(--base-background-color);
-}
-
-/*PROPIEDADES DE LAS IMAGENES*/
-img {
-  object-fit: cover;
-  display: block;
-  position: relative;
-}
-.image {
-  width: 100%;
-  height: 100%;
 }
 
 /*WELCOME SECTION*/
@@ -101,8 +89,8 @@ img {
   background-color: #ffebcd;
   color: #2c3e50;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
   align-items: center;
   align-content: space-around;
   animation: show-up 1s ease-in 1s forwards;
@@ -121,7 +109,7 @@ img {
 
 .navlink {
   font-family: "Roboto", sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   animation: intro 1s ease-in 2.5s forwards;
   opacity: 0;
 }
@@ -130,6 +118,17 @@ a:visited {
   text-decoration: none;
   color: #2c3e50;
   font-family: "Roboto", sans-serif;
+}
+
+/*PROPIEDADES DE LAS IMAGENES*/
+img {
+  object-fit: cover;
+  display: block;
+  position: relative;
+}
+.image {
+  width: 100%;
+  height: 100%;
 }
 
 .home_button {
@@ -157,56 +156,6 @@ a:visited {
   color: #ffebcd;
   font-family: "Roboto", sans-serif;
   margin: auto;
-}
-
-/*-----PICASSO SECTION--------*/
-.picasso_section {
-  grid-template-rows: repeat(4, 100vh) 3rem;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "pic-1 pic-1"
-    "pic-2 pic-3"
-    "pic-4 pic-5"
-    "pic-6 pic-6"
-    "home site";
-  justify-items: center;
-  align-items: center;
-  color: #fff;
-}
-
-#guernica {
-  grid-area: pic-1;
-  width: 95%;
-}
-
-#la_tragedia {
-  grid-area: pic-2;
-  width: 60%;
-  height: 90%;
-}
-
-#mujer_que_llora {
-  grid-area: pic-3;
-  width: 70%;
-  height: 90%;
-}
-
-#mujer_cuello_armiño {
-  grid-area: pic-4;
-  width: 80%;
-  height: 90%;
-}
-
-#mujer_espejo {
-  grid-area: pic-5;
-  width: 70%;
-  height: 90%;
-}
-
-#masacre_corea {
-  grid-area: pic-6;
-  width: 95%;
-  height: 95%;
 }
 
 /*----VAN GOGH SECTION----*/
