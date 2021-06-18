@@ -159,60 +159,6 @@ img {
   margin: auto;
 }
 
-/*----VAN GOGH SECTION----*/
-.vangogh_section {
-  grid-template-rows: repeat(2, 100vh 110vh) 3rem;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas:
-    "pic-1 pic-2"
-    "pic-3 pic-3"
-    "pic-4 pic-5"
-    "pic-6 pic-6"
-    "home site";
-  justify-items: center;
-  align-items: center;
-}
-
-#terraza {
-  grid-area: pic-1;
-  width: 80%;
-  height: 95%;
-}
-#las_sillas {
-  grid-area: pic-2;
-  width: 45%;
-  height: 75%;
-}
-
-#noche_rodano {
-  grid-area: pic-3;
-  height: 90%;
-  width: 65%;
-}
-
-#noche_rodano > img.image,
-#noche_estrellada > img.image {
-  object-fit: cover contain;
-}
-
-#autoretrato {
-  grid-area: pic-4;
-  height: 90%;
-  width: 70%;
-}
-
-#autoretrato_2 {
-  grid-area: pic-5;
-  height: 90%;
-  width: 70%;
-}
-
-#noche_estrellada {
-  grid-area: pic-6;
-  height: 90%;
-  width: 65%;
-}
-
 /*----MONET SECTION----*/
 .monet_section {
   grid-template-rows: repeat(3, 60vh) 3rem;
