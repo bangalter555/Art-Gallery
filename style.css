@@ -141,7 +141,18 @@ a:visited {
   display: flex;
   align-items: center;
 }
-.home_button > a {
+
+.site {
+  grid-area: site;
+  width: 20%;
+  height: 90%;
+  background-color: #2c3e50;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+.home_button > a,
+.site > a {
   text-decoration: none;
   color: #ffebcd;
   font-family: "Roboto", sans-serif;
@@ -157,7 +168,7 @@ a:visited {
     "pic-2 pic-3"
     "pic-4 pic-5"
     "pic-6 pic-6"
-    "home home";
+    "home site";
   justify-items: center;
   align-items: center;
   color: #fff;
@@ -207,7 +218,7 @@ a:visited {
     "pic-3 pic-3"
     "pic-4 pic-5"
     "pic-6 pic-6"
-    "home home";
+    "home site";
   justify-items: center;
   align-items: center;
 }
@@ -260,7 +271,7 @@ a:visited {
     "pic-1 pic-2"
     "pic-3 pic-3"
     "pic-4 pic-5"
-    "home home";
+    "home site";
   justify-items: center;
   align-items: center;
 }
@@ -302,7 +313,7 @@ a:visited {
     "pic-1 pic-2"
     "pic-3 pic-4"
     "pic-5 pic-5"
-    "home home";
+    "home site";
   justify-items: center;
   align-items: center;
 }
@@ -344,7 +355,7 @@ a:visited {
   grid-template-areas:
     "pic-1 pic-2"
     "pic-1 pic-3"
-    "home home";
+    "home site";
   justify-items: center;
   align-items: center;
 }
@@ -373,7 +384,7 @@ a:visited {
   grid-template-areas:
     "pic-1 pic-1"
     "pic-2 pic-3"
-    "home home";
+    "home site";
   justify-items: center;
   align-items: center;
 }
@@ -403,7 +414,7 @@ a:visited {
   grid-template-areas:
     "pic-1 pic-2"
     "pic-3 pic-3"
-    "home home";
+    "home site";
   justify-items: center;
   align-items: center;
 }
