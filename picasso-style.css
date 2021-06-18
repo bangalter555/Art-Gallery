@@ -111,7 +111,6 @@ img {
 }
 
 .navlink {
-  font-family: "Roboto", sans-serif;
   font-size: 0.8rem;
   animation: intro 1s ease-in 2.5s forwards;
   opacity: 0;
@@ -120,7 +119,7 @@ a.navlink,
 a:visited {
   text-decoration: none;
   color: #2c3e50;
-  font-family: "Roboto", sans-serif;
+  font-family: "Alegreya Sans SC", sans-serif;
 }
 
 /*-----PICASSO SECTION--------*/
