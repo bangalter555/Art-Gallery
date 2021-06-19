@@ -59,15 +59,12 @@ body {
   animation: intro 1s ease-in forwards;
 }
 
-#welcome > h1 {
-  font-family: "Alegreya Sans SC", sans-serif;
-  font-size: 3.5rem;
-  color: #ffebcd;
+#welcome > img {
+  object-fit: contain;
   opacity: 0;
   animation: intro 1s ease-in 2.5s forwards;
   margin: auto;
   align-self: center;
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes intro {
@@ -109,7 +106,6 @@ body {
 }
 
 .navlink {
-  font-family: "Roboto", sans-serif;
   font-size: 0.9rem;
   animation: intro 1s ease-in 2.5s forwards;
   opacity: 0;
@@ -119,6 +115,7 @@ a:visited {
   text-decoration: none;
   color: #2c3e50;
   font-family: "Alegreya Sans SC", sans-serif;
+  text-align: center;
 }
 
 /*PROPIEDADES DE LAS IMAGENES*/
@@ -132,118 +129,70 @@ img {
   height: 100%;
 }
 
-.home_button {
-  grid-area: home;
-  width: 20%;
-  height: 90%;
-  background-color: #2c3e50;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-}
-
-.site {
-  grid-area: site;
-  width: 20%;
-  height: 90%;
-  background-color: #2c3e50;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-}
-.home_button > a,
-.site > a {
-  text-decoration: none;
-  color: #ffebcd;
-  font-family: "Roboto", sans-serif;
-  margin: auto;
-}
-
-/*----CARAVAGGIO SECTION----*/
-.caravaggio_section {
-  grid-template-rows: repeat(2, 50vh) 3rem;
-  grid-template-columns: repeat(2, 1fr);
+#renoir {
+  grid-template-rows: repeat(5, 100vh);
+  grid-template-columns: repeat(2, 60% 40%);
   grid-template-areas:
-    "pic-1 pic-2"
-    "pic-1 pic-3"
-    "home site";
-  justify-items: center;
-  align-items: center;
+    "pic-1 info-1"
+    "pic-2 info-2"
+    "pic-3 info-3"
+    "pic-4 info-4"
+    "pic-5 info-5";
+  row-gap: 10px;
 }
 
-#pintura-1 {
+#la_bohemienne {
   grid-area: pic-1;
-  width: 50%;
-  height: 90%;
+  width: 55%;
+  height: 100%;
 }
-#medusa {
+#info-1 {
+  grid-area: info-1;
+  width: 100%;
+  height: 100%;
+}
+
+#retrato {
   grid-area: pic-2;
-  width: 55%;
-  height: 85%;
-}
-
-#prendimiento {
-  grid-area: pic-3;
-  width: 55%;
-  height: 85%;
-}
-
-/*--- DALI SECTION ---*/
-.dali_section {
-  grid-template-rows: repeat(2, 100vh) 3rem;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas:
-    "pic-1 pic-1"
-    "pic-2 pic-3"
-    "home site";
-  justify-items: center;
-  align-items: center;
-}
-
-#persistencia_memoria {
-  grid-area: pic-1;
   width: 60%;
-  height: 92%;
+  height: 100%;
 }
 
-#san_antonio {
-  grid-area: pic-2;
-  width: 92%;
-  height: 92%;
+#info-2 {
+  grid-area: info-2;
+  width: 100%;
+  height: 100%;
 }
 
-#los_elefantes {
+#retrato_2 {
   grid-area: pic-3;
-  width: 92%;
-  height: 92%;
+  width: 60%;
+  height: 100%;
+}
+#info-3 {
+  grid-area: info-3;
+  width: 100%;
+  height: 100%;
 }
 
-/*--- WARHOL SECTION ---*/
-.warhol_section {
-  grid-template-rows: repeat(2, 70vh) 3rem;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas:
-    "pic-1 pic-2"
-    "pic-3 pic-3"
-    "home site";
-  justify-items: center;
-  align-items: center;
+#grenouillere {
+  grid-area: pic-4;
+  width: 100%;
+  height: 100%;
+}
+#info-4 {
+  grid-area: info-4;
+  width: 100%;
+  height: 100%;
 }
 
-#el_platano {
-  grid-area: pic-1;
-  width: 50%;
-  height: 90%;
+#remeros {
+  grid-area: pic-5;
+  width: 100%;
+  height: 100%;
 }
-
-#mao {
-  grid-area: pic-2;
-  width: 50%;
-  height: 95%;
-}
-
-#campbell {
-  grid-area: pic-3;
-  width: 50%;
-  height: 95%;
+#info-5 {
+  grid-area: info-5;
+  width: 100%;
+  height: 100%;
 }
