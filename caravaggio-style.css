@@ -1,0 +1,204 @@
+:root {
+  font-size: 20px;
+  --base-background-color: #fbfaf4;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  overflow-x: hidden;
+}
+
+/*PROPIEDADES COMPARTIDAS*/
+.item {
+  position: relative;
+  /*border: 0.5px black solid;*/
+  /*margin: 1px;*/
+  box-shadow: 2px 2px 10px #666;
+}
+
+/*PROPIEDADES DEL CONTENEDOR*/
+#container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  z-index: 1;
+  background: linear-gradient(145deg, #bdc3c7 5%, #2c3e50 95%); /*#f0f0f0;*/
+}
+
+/*----SECTION SIZE-----*/
+.section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: grid;
+  background-color: var(--base-background-color);
+}
+
+/*WELCOME SECTION*/
+#welcome {
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+  background-color: #0e1111;
+  display: flex;
+  /*justify-content: center;
+  align-items: center; /*or margin: auto*/
+  animation: intro 1s ease-in forwards;
+}
+
+#welcome > img {
+  object-fit: contain;
+  opacity: 0;
+  animation: intro 1s ease-in 2.5s forwards;
+  margin: auto;
+  align-self: center;
+}
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#navbar {
+  position: sticky;
+  z-index: 5;
+  top: 0;
+  left: -100px;
+  opacity: 0;
+  height: 100vh;
+  width: 15%;
+  background-color: #b20000;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: space-around;
+  animation: show-up 1s ease-in 1s forwards;
+}
+
+@keyframes show-up {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.navlink {
+  font-size: 0.9rem;
+  animation: intro 1s ease-in 2.5s forwards;
+  opacity: 0;
+}
+a.navlink,
+a:visited {
+  text-decoration: none;
+  color: #0e1111;
+  font-family: "Alegreya Sans SC", sans-serif;
+  text-align: center;
+}
+
+/*PROPIEDADES DE LAS IMAGENES*/
+img {
+  object-fit: cover;
+  display: block;
+  position: relative;
+}
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+/*----CARAVAGGIO SECTION----*/
+#caravaggio {
+  grid-template-rows: repeat(6, 100vh);
+  grid-template-columns: 60% 40%;
+  grid-template-areas:
+    "pic-1 info-1"
+    "pic-2 info-2"
+    "pic-3 info-3"
+    "pic-4 info-4"
+    "pic-5 info-5"
+    "pic-6 info-6";
+  row-gap: 10px;
+}
+
+#crucifixion {
+  grid-area: pic-1;
+  width: 60%;
+  height: 100%;
+}
+#info-1 {
+  grid-area: info-1;
+}
+
+#la_inspiracion {
+  grid-area: pic-2;
+  width: 50%;
+  height: 100%;
+}
+#info-2 {
+  grid-area: info-2;
+}
+
+#las_7_obras {
+  grid-area: pic-3;
+  width: 50%;
+  height: 100%;
+}
+#info-3 {
+  grid-area: info-3;
+}
+
+#prendimiento {
+  grid-area: pic-4;
+}
+#info-4 {
+  grid-area: info-4;
+}
+
+#incredulidad {
+  grid-area: pic-5;
+}
+#info-5 {
+  grid-area: info-5;
+}
+
+#san_juan_bautista {
+  grid-area: pic-6;
+}
+#info-6 {
+  grid-area: info-6;
+}
+
+#info-1,
+#info-2,
+#info-3,
+#info-4,
+#info-5,
+#info-6,
+#prendimiento,
+#incredulidad,
+#san_juan_bautista {
+  width: 100%;
+  height: 100%;
+}
