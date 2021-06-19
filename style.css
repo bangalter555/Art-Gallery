@@ -159,35 +159,6 @@ img {
   margin: auto;
 }
 
-/*----CARAVAGGIO SECTION----*/
-.caravaggio_section {
-  grid-template-rows: repeat(2, 50vh) 3rem;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas:
-    "pic-1 pic-2"
-    "pic-1 pic-3"
-    "home site";
-  justify-items: center;
-  align-items: center;
-}
-
-#pintura-1 {
-  grid-area: pic-1;
-  width: 50%;
-  height: 90%;
-}
-#medusa {
-  grid-area: pic-2;
-  width: 55%;
-  height: 85%;
-}
-
-#prendimiento {
-  grid-area: pic-3;
-  width: 55%;
-  height: 85%;
-}
-
 /*--- DALI SECTION ---*/
 .dali_section {
   grid-template-rows: repeat(2, 100vh) 3rem;
