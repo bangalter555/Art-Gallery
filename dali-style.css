@@ -123,6 +123,20 @@ img {
   height: 100%;
 }
 
+/*---- MEDIA QUERIES ----*/
+@media screen and (min-width: 400px) and (max-width: 900px) {
+  #navbar {
+    width: 25%;
+  }
+  .navlink {
+    font-size: 0.75rem;
+  }
+ #welcome {
+   background-size: cover;
+   background-position: center;
+ }
+}
+
 /*----DALI SECTION---*/
 #dali {
   grid-template-rows: repeat(5, 100vh);

@@ -51,6 +51,7 @@ img {
   object-fit: cover;
   display: block;
   position: relative;
+
 }
 .image {
   width: 100%;
@@ -111,7 +112,7 @@ img {
 }
 
 .navlink {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   animation: intro 1s ease-in 2.5s forwards;
   opacity: 0;
 }
@@ -122,6 +123,19 @@ a:visited {
   font-family: "Alegreya Sans SC", sans-serif;
 }
 
+/*---- MEDIA QUERIES ----*/
+@media screen and (min-width: 400px) and (max-width: 900px) {
+  #navbar {
+    width: 25%;
+  }
+  .navlink {
+    font-size: 0.75rem;
+  }
+ #welcome {
+   background-size: cover;
+   background-position: center;
+ }
+}
 /*-----PICASSO SECTION--------*/
 #picasso {
   grid-template-rows: repeat(7, 100vh) 30rem;

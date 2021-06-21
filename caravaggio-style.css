@@ -128,6 +128,26 @@ img {
   height: 100%;
 }
 
+/*---- MEDIA QUERIES ----*/
+@media  (max-width:700px) {
+  #navbar {
+    width: 30%;
+  }
+  .navlink {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #navbar {
+    width: 30%;
+    }
+    .navlink {
+      font-size: 0.2rem;
+    }
+  }
+
+
 /*----CARAVAGGIO SECTION----*/
 #caravaggio {
   grid-template-rows: repeat(6, 100vh);

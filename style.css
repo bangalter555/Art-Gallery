@@ -43,7 +43,6 @@ body {
   position: relative;
   width: 100%;
   height: auto;
-  display: grid;
   background-color: var(--base-background-color);
 }
 
@@ -121,13 +120,18 @@ a:visited {
   font-family: "Alegreya Sans SC", sans-serif;
 }
 
-/*PROPIEDADES DE LAS IMAGENES*/
-img {
-  object-fit: cover;
-  display: block;
-  position: relative;
+/*---- MEDIA QUERIES ----*/
+@media screen and (min-width: 400px) and (max-width: 900px) {
+    #navbar {
+      width: 25%;
+    }
+    #welcome > h1 {
+      font-size: 2.5rem;
+    }
+    .navlink {
+      font-size: 0.75rem;
+    }
 }
-.image {
-  width: 100%;
-  height: 100%;
-}
+  
+
+  

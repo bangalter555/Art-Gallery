@@ -123,6 +123,15 @@ img {
   height: 100%;
 }
 
+/*---- MEDIA QUERIES ----*/
+@media screen and (min-width: 400px) and (max-width: 900px) {
+  #navbar {
+    width: 25%;
+  }
+  .navlink {
+    font-size: 0.75rem;
+  }
+}
 /*------WARHOL SECTION----*/
 #warhol {
   grid-template-rows: repeat(3, 100vh);

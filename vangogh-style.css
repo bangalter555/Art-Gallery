@@ -124,6 +124,20 @@ a:visited {
   font-family: "Alegreya Sans SC", sans-serif;
 }
 
+/*---- MEDIA QUERIES ----*/
+@media screen and (min-width: 400px) and (max-width: 900px) {
+  #navbar {
+    width: 25%;
+  }
+  .navlink {
+    font-size: 0.75rem;
+  }
+ #welcome {
+   background-size: cover;
+   background-position: center;
+ }
+}
+
 /*----VAN GOGH SECTION----*/
 #van_gogh {
   grid-template-rows: repeat(6, 100vh);
