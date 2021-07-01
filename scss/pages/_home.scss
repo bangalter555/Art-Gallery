@@ -1,0 +1,42 @@
+@forward '../base/reset';
+
+@forward '../utils/animations';
+
+@forward '../layout/navigation';
+
+@forward '../utils/classes';
+
+@use '../base/typography' as t;
+
+@use '../utils/variables' as v;
+
+@use '../utils/mixins' as m;
+
+/*HOME SECTION*/
+
+#home {
+  @include m.page--colors(#2c3e50, #ffebcd);
+  @include m.animation(intro, 1s, ease-in, 0s, forwards);
+  h1 {
+    font-family: t.$general-font;
+    font-size: 3.5rem;
+    opacity: 0;
+    margin: auto;
+    align-self: center;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    @include m.animation(intro, 1s, ease-in, 2.5s, forwards);
+  }
+}
+
+/*---- MEDIA QUERIES ----*/
+@media screen and (min-width: 400px) and (max-width: 900px) {
+  .navbar {
+    width: 25%;
+  }
+  #home > h1 {
+    font-size: 2.5rem;
+  }
+  .navlink {
+    font-size: 0.75rem;
+  }
+}

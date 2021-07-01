@@ -1,0 +1,82 @@
+@forward '../base/reset';
+
+@forward '../utils/animations';
+
+@forward '../layout/navigation';
+
+@forward '../utils/classes';
+
+@use '../base/typography' as t;
+
+@use '../utils/variables' as v;
+
+@use '../utils/mixins' as m;
+
+/*PICASSO SECTION*/
+#picasso_section {
+  @include m.bg-section(url(https://teatro-nescafe-delasartes.cl/wp-content/uploads/2017/10/Pablo-Picasso-850x564.jpg), cover, scroll, no-repeat);
+  @include m.page--colors(none, #ffebcd);
+  @include m.animation(intro, 1s, ease-in, 0s, forwards);
+}
+
+/*----SECTION MEDIA QUERIES ----*/
+@media screen and (min-width: 400px) and (max-width: 900px) {
+  #picasso_section {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/*LAYOUT*/
+#picasso {
+  @include m.grid(
+    repeat(7, 100vh) 30rem,
+    1fr 1fr,
+    "pic-1 pic-1" "info-1 info-1" "pic-2 info-2" "pic-3 info-3" "pic-4 info-4"
+      "pic-5 info-5" "pic-6 pic-6" "info-6 info-6"
+  );
+}
+
+#guernica {
+  @include m.grid-child(pic-1, 100%, 96%);
+}
+
+#info-1 {
+  @include m.pic-info(info-1);
+}
+
+#la_tragedia {
+  @include m.grid-child(pic-2, 55%, 100%);
+}
+
+#info-2 {
+  @include m.pic-info(info-2);
+}
+
+#sylvette {
+  @include m.grid-child(pic-3, 70%, 100%);
+}
+#info-3 {
+  @include m.pic-info(info-3);
+}
+
+#mujer_cuello_armiño {
+  @include m.grid-child(pic-4, 80%, 100%);
+}
+#info-4 {
+  @include m.pic-info(info-4);
+}
+
+#mujer_espejo {
+  @include m.grid-child(pic-5, 73%, 100%);
+}
+#info-5 {
+  @include m.pic-info(info-5);
+}
+
+#masacre_corea {
+  @include m.pic-info(pic-6);
+}
+#info-6 {
+  @include m.pic-info(info-6);
+}

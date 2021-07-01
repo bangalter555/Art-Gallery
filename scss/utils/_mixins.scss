@@ -1,0 +1,55 @@
+@mixin bg-section($bg-url, $bg-size, $bg-attach, $bg-repeat) {
+  background: $bg-url;
+  background-size: $bg-size;
+  background-attachment: $bg-attach;
+  background-repeat: $bg-repeat;
+}
+
+@mixin page--colors($background-color, $color) {
+  background-color: $background-color;
+  color: $color;
+}
+
+@mixin animation($name, $duration, $timing, $delay, $fillmode) {
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-timing-function: $timing;
+  animation-delay: $delay;
+  animation-fill-mode: $fillmode;
+}
+
+@mixin navbar {
+  position: sticky;
+  z-index: 5;
+  top: 0;
+  left: -100px;
+  opacity: 0;
+  height: 100vh;
+  width: 15%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: space-around;
+}
+
+/*SECTION GRID*/
+@mixin grid($gt-rows, $gt-columns, $gt-area) {
+  grid-template-rows: $gt-rows;
+  grid-template-columns: $gt-columns;
+  grid-template-areas: $gt-area;
+  row-gap: 10px;
+  color: #fff;
+}
+
+@mixin grid-child($area, $width, $height) {
+  grid-area: $area;
+  width: $width;
+  height: $height;
+}
+
+@mixin pic-info($area) {
+  grid-area: $area;
+  width: 100%;
+  height: 100%;
+}

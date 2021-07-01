@@ -1,0 +1,21 @@
+@use '../base/typography' as t;
+@forward '../utils/animations';
+@use '../utils/mixins'as m;
+
+/*NAVBAR*/
+.navbar {
+  @include m.navbar;
+  @include m.page--colors(#ffebcd, #2c3e50);
+  @include m.animation(show-up, 1s, ease-in, 1s, forwards);
+}
+
+a.navlink,
+a.navlink:visited {
+  font-family: t.$general-font;
+  font-size: 0.9rem;
+  @include m.animation(intro, 1s, ease-in, 2.5s, forwards);
+  opacity: 0;
+  text-decoration: none;
+  color: #2c3e50;
+  font-family: t.$general-font;
+}

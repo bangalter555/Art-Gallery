@@ -1,0 +1,17 @@
+@forward '../utils/animations';
+
+@use '../base/typography' as t;
+
+@use '../utils/variables' as v;
+
+@use '../utils/mixins' as m;
+
+/*WELCOME SECTION*/
+.welcome {
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  /*justify-content: center;
+  align-items: center; /*or margin: auto*/
+}

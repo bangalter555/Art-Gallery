@@ -11,14 +11,6 @@
   padding: 0;
 }
 
-body {
-  position: relative;
-  display: block;
-  max-width: 100%;
-  height: auto;
-  overflow-x: hidden;
-}
-
 /*PROPIEDADES COMPARTIDAS*/
 .item {
   position: relative;
@@ -122,16 +114,13 @@ a:visited {
 
 /*---- MEDIA QUERIES ----*/
 @media screen and (min-width: 400px) and (max-width: 900px) {
-    #navbar {
-      width: 25%;
-    }
-    #welcome > h1 {
-      font-size: 2.5rem;
-    }
-    .navlink {
-      font-size: 0.75rem;
-    }
+  #navbar {
+    width: 25%;
+  }
+  #welcome > h1 {
+    font-size: 2.5rem;
+  }
+  .navlink {
+    font-size: 0.75rem;
+  }
 }
-  
-
-  
