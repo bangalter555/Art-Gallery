@@ -17,13 +17,26 @@
   @include m.bg-section(url(https://teatro-nescafe-delasartes.cl/wp-content/uploads/2017/10/Pablo-Picasso-850x564.jpg), cover, scroll, no-repeat);
   @include m.page--colors(none, #ffebcd);
   @include m.animation(intro, 1s, ease-in, 0s, forwards);
+
+  nav {
+    @include m.navbar;
+    @include m.page--colors(#ffebcd, #2c3e50);
+    @include m.animation(show-up, 1s, ease-in, 1s, forwards);
+  }
 }
 
 /*----SECTION MEDIA QUERIES ----*/
-@media screen and (min-width: 400px) and (max-width: 900px) {
+@media screen and (max-width: 700px) {
   #picasso_section {
     background-size: cover;
     background-position: center;
+
+    nav {
+      width: 25%;
+    }
+    .navlink {
+      font-size: 0.6rem;
+    }
   }
 }
 

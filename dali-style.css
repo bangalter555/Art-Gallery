@@ -131,10 +131,10 @@ img {
   .navlink {
     font-size: 0.75rem;
   }
- #welcome {
-   background-size: cover;
-   background-position: center;
- }
+  #welcome {
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 /*----DALI SECTION---*/

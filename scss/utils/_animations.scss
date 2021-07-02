@@ -1,5 +1,14 @@
 /*INTRO ANIMATION*/
 
+@-webkit-keyframes intro {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes intro {
   0% {
     opacity: 0;
@@ -10,12 +19,26 @@
 }
 
 /*SHOW UP ANIMATION*/
-@keyframes show-up {
+@-webkit-keyframes show-up {
   0% {
+    -webkit-transform: translateX(-100px);
     transform: translateX(-100px);
     opacity: 0;
   }
   100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes show-up {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1;
   }

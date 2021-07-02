@@ -12,42 +12,56 @@
 
 @use '../utils/mixins' as m;
 
-/*VAN GOGH SECTION*/
-#van_gogh_section {
-  @include m.bg-section(url(https://www.nicaraguadisena.com/wp-content/uploads/2021/04/vincent-van-gogh-cuadro-1080x621.jpg),100vw 100vh, scroll, no-repeat);
-  @include m.page--colors(none, #ffebcd);
-  @include m.animation(intro, 1s, ease-in, 0.5s, forwards);
+/*CARAVAGGIO SECTION*/
+#caravaggio_section {
+  @include m.page--colors(#0e1111, none);
+  @include m.animation(intro, 1s, ease-in, 0s, forwards);
+
+  img {
+    object-fit: contain;
+    opacity: 0;
+    animation: intro 1s ease-in 2.5s forwards;
+    margin: auto;
+    align-self: center;
+  }
 
   nav {
     @include m.navbar;
-    @include m.page--colors(#2c3e50, #ffebcd);
+    @include m.page--colors(#b20000, #0e1111);
     @include m.animation(show-up, 1s, ease-in, 1s, forwards);
+  }
 
-    a.navlink,
-    a.navlink:visited {
-      color: #ffebcd;
-    }
+  a.navlink,
+  a.navlink:visited {
+    color: #0e1111;
   }
 }
 
-/*----SECTION MEDIA QUERIES ----*/
-@media screen and (min-width: 400px) and (max-width: 900px) {
-  #van_gogh_section {
-    background-size: cover;
-    background-position: center;
-
+/*---- MEDIA QUERIES ----*/
+@media (max-width: 700px) {
+  #caravaggio_section {
     nav {
-      width: 25%;
+      width: 30%;
     }
-
     .navlink {
       font-size: 0.6rem;
     }
   }
 }
 
+@media (max-width: 400px) {
+  #caravaggio_section {
+    nav {
+      width: 30%;
+    }
+    .navlink {
+      font-size: 0.2rem;
+    }
+  }
+}
+
 /*LAYOUT*/
-#van_gogh {
+#caravaggio {
   @include m.grid(
     repeat(6, 100vh),
     60% 40%,
@@ -56,42 +70,42 @@
   );
 }
 
-#terraza {
+#crucifixion {
   @include m.grid-child(pic-1, 60%, 100%);
 }
 #info-1 {
   @include m.pic-info(info-1);
 }
 
-#las_sillas {
-  @include m.grid-child(pic-2, 60%, 100%);
+#la_inspiracion {
+  @include m.grid-child(pic-2, 50%, 100%);
 }
 #info-2 {
   @include m.pic-info(info-2);
 }
 
-#noche_rodano {
-  @include m.pic-info(pic-3);
+#las_7_obras {
+  @include m.grid-child(pic-3, 50%, 100%);
 }
 #info-3 {
   @include m.pic-info(info-3);
 }
 
-#autoretrato {
-  @include m.grid-child(pic-4, 65%, 100%);
+#prendimiento {
+  @include m.pic-info(pic-4);
 }
 #info-4 {
   @include m.pic-info(info-4);
 }
 
-#autoretrato_2 {
-  @include m.grid-child(pic-5, 60%, 100%);
+#incredulidad {
+  @include m.pic-info(pic-5);
 }
 #info-5 {
   @include m.pic-info(info-5);
 }
 
-#noche_estrellada {
+#san_juan_bautista {
   @include m.pic-info(pic-6);
 }
 #info-6 {

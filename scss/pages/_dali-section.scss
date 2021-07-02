@@ -1,0 +1,89 @@
+@forward '../base/reset';
+
+@forward '../utils/animations';
+
+@forward '../layout/navigation';
+
+@forward '../utils/classes';
+
+@use '../base/typography' as t;
+
+@use '../utils/variables' as v;
+
+@use '../utils/mixins' as m;
+
+/*DALI SECTION*/
+#dali_section {
+  @include m.bg-section(url(https://cosas.com.ec/wp-content/uploads/2020/01/salvador-dali.jpg), cover, scroll, no-repeat);
+  @include m.page--colors(none, #ffebcd);
+  @include m.animation(intro, 1s, ease-in, 0s, forwards);
+  display: inline-block;
+
+  nav {
+    @include m.navbar;
+    @include m.page--colors(#2c3e50, #ffebcd);
+    @include m.animation(show-up, 1s, ease-in, 1s, forwards);
+  }
+
+  a.navlink,
+  a.navalink:visited {
+    color: #ffebcd;
+  }
+}
+
+/*----SECTION MEDIA QUERIES ----*/
+@media screen and (max-width: 700px) {
+  #dali_section {
+    background-size: cover;
+    background-position: center;
+
+    nav {
+      width: 25%;
+    }
+    .navlink {
+      font-size: 0.6rem;
+    }
+  }
+}
+
+/*LAYOUT*/
+#dali {
+  grid-template-rows: repeat(5, 100vh);
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 10px;
+}
+
+/*#persistencia_memoria {
+  @include m.grid-span(1, 3, 1, 2);
+}
+#info-1 {
+  @include m.grid-span(3, 4, 1, 2);
+}
+
+#reminiscencia {
+  @include m.grid-span(1, 3, 2, 3);
+}
+#info-2 {
+  @include m.grid-span(3, 4, 2, 3);
+}
+
+#cisnes {
+  @include m.grid-span(1, 3, 3, 4);
+}
+#info-3 {
+  @include m.grid-span(3, 4, 3, 4);
+}
+
+#enigma_hitler {
+  @include m.grid-span(1, 3, 4, 5);
+}
+#info-4 {
+  @include m.grid-span(3, 4, 4, 5);
+}
+
+#san_antonino {
+  @include m.grid-span(1, 3, 5, 6);
+}
+#info-5 {
+  @include m.grid-span(3, 4, 5, 6);
+}*/

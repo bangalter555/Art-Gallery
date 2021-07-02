@@ -22,21 +22,31 @@
     font-size: 3.5rem;
     opacity: 0;
     margin: auto;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
     @include m.animation(intro, 1s, ease-in, 2.5s, forwards);
   }
+
+  nav {
+    @include m.navbar;
+    @include m.page--colors(#ffebcd, #2c3e50);
+    @include m.animation(show-up, 1s, ease-in, 1s, forwards);
+  }
 }
 
 /*---- MEDIA QUERIES ----*/
-@media screen and (min-width: 400px) and (max-width: 900px) {
-  .navbar {
-    width: 25%;
-  }
-  #home > h1 {
-    font-size: 2.5rem;
+@media screen and (max-width: 700px) {
+  #home {
+    h1 {
+      font-size: 2.5rem;
+    }
+    nav {
+      width: 25%;
+    }
   }
   .navlink {
-    font-size: 0.75rem;
+    font-size: 0.6rem;
   }
 }

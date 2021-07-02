@@ -1,0 +1,98 @@
+@forward '../base/reset';
+
+@forward '../utils/animations';
+
+@forward '../layout/navigation';
+
+@forward '../utils/classes';
+
+@use '../base/typography' as t;
+
+@use '../utils/variables' as v;
+
+@use '../utils/mixins' as m;
+
+/*MONET SECTION*/
+
+#monet_section {
+  @include m.page--colors(#2c3e50, #ffebcd);
+  @include m.animation(intro, 1s, ease-in, 0s, forwards);
+
+  img {
+    object-fit: contain;
+    opacity: 0;
+    animation: intro 1s ease-in 2.5s forwards;
+    margin: auto;
+    align-self: center;
+  }
+
+  nav {
+    @include m.navbar;
+    @include m.page--colors(#ffebcd, #2c3e50);
+    @include m.animation(show-up, 1s, ease-in, 1s, forwards);
+  }
+}
+
+/*---- MEDIA QUERIES ----*/
+@media (max-width: 700px) {
+  #monet_section {
+    nav {
+      width: 30%;
+    }
+    .navlink {
+      font-size: 0.6rem;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  #monet_section {
+    nav {
+      width: 30%;
+    }
+  }
+}
+
+/*LAYOUT*/
+#monet {
+  @include m.grid(
+    repeat(5, 100vh),
+    60% 40%,
+    "pic-1 info-1" "pic-2 info-2" "pic-3 info-3" "pic-4 info-4" "pic-5 info-5"
+  );
+}
+
+#las_amapolas {
+  @include m.pic-info(pic-1);
+}
+#info-1 {
+  @include m.pic-info(info-1);
+}
+
+#crepusculo {
+  @include m.pic-info(pic-2);
+}
+#info-2 {
+  @include m.pic-info(info-2);
+}
+
+#impresion {
+  @include m.pic-info(pic-3);
+}
+#info-3 {
+  @include m.pic-info(info-3);
+}
+
+#urraca {
+  @include m.pic-info(pic-4);
+}
+#info-4 {
+  @include m.pic-info(info-4);
+}
+
+#etretat {
+  @include m.pic-info(pic-5);
+}
+#info-5 {
+  @include m.pic-info(info-5);
+}

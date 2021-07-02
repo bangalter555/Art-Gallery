@@ -4,6 +4,7 @@
 *,
 ::before,
 ::after {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -17,11 +18,19 @@ body {
   overflow-x: hidden;
 }
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /*SHARED CUSTOMS*/
 .item {
   position: relative;
   /*border: 0.5px black solid;*/
   /*margin: 1px;*/
+  -webkit-box-shadow: 2px 2px 10px #666;
   box-shadow: 2px 2px 10px #666;
 }
 
@@ -29,10 +38,18 @@ body {
 #container {
   width: 100%;
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   z-index: 1;
+  background: -o-linear-gradient(305deg, #bdc3c7 5%, #2c3e50 95%);
   background: linear-gradient(145deg, #bdc3c7 5%, #2c3e50 95%); /*#f0f0f0;*/
 }
 
@@ -41,12 +58,14 @@ body {
   position: relative;
   width: 100%;
   height: auto;
+  display: -ms-grid;
   display: grid;
   background-color: v.$body-bg-color;
 }
 
 /*IMAGE CUSTOM*/
 img {
+  -o-object-fit: cover;
   object-fit: cover;
   display: block;
   position: relative;

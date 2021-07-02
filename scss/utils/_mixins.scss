@@ -10,15 +10,16 @@
   color: $color;
 }
 
-@mixin animation($name, $duration, $timing, $delay, $fillmode) {
-  animation-name: $name;
-  animation-duration: $duration;
-  animation-timing-function: $timing;
-  animation-delay: $delay;
-  animation-fill-mode: $fillmode;
-}
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
 
+/*NAVIGATION BAR*/
 @mixin navbar {
+  position: -webkit-sticky;
   position: sticky;
   z-index: 5;
   top: 0;
@@ -26,11 +27,29 @@
   opacity: 0;
   height: 100vh;
   width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-line-pack: distribute;
   align-content: space-around;
+}
+
+@mixin animation($name, $duration, $timing, $delay, $fillmode) {
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-timing-function: $timing;
+  animation-delay: $delay;
+  animation-fill-mode: $fillmode;
 }
 
 /*SECTION GRID*/
@@ -52,4 +71,11 @@
   grid-area: $area;
   width: 100%;
   height: 100%;
+}
+
+@mixin grid-span($col-st, $col-end, $row-st, $row-end) {
+  grid-column-start: $col-st;
+  grid-column-end: &$col-end;
+  grid-row-start: $row-st;
+  grid-row-end: $row-end;
 }
