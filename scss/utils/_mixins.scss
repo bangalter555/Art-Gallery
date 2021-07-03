@@ -75,7 +75,7 @@
 
 @mixin grid-span($col-st, $col-end, $row-st, $row-end) {
   grid-column-start: $col-st;
-  grid-column-end: &$col-end;
+  grid-column-end: $col-end;
   grid-row-start: $row-st;
   grid-row-end: $row-end;
 }

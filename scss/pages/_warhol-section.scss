@@ -12,9 +12,10 @@
 
 @use '../utils/mixins' as m;
 
-/*DALI SECTION*/
-#dali_section {
-  @include m.bg-section(url(https://cosas.com.ec/wp-content/uploads/2020/01/salvador-dali.jpg), cover, scroll, no-repeat);
+/*WARHOL SECTION*/
+
+#warhol_section {
+  @include m.bg-section(url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/03/04/16/shutterstock-editorial-10336938a.jpg?width=1200), cover, scroll, no-repeat);
   @include m.page--colors(none, #ffebcd);
   @include m.animation(intro, 1s, ease-in, 0s, forwards);
   display: inline-block;
@@ -33,7 +34,7 @@
 
 /*---- MEDIA QUERIES ----*/
 @media (max-width: 700px) {
-  #dali_section {
+  #warhol_section {
     nav {
       width: 30%;
     }
@@ -44,7 +45,7 @@
 }
 
 @media (max-width: 400px) {
-  #dali_section {
+  #warhol_section {
     nav {
       width: 30%;
     }
@@ -52,41 +53,28 @@
 }
 
 /*LAYOUT*/
-#dali {
-  @include m.grid(repeat(5, 100vh), repeat(3, 1fr), none);
+
+#warhol {
+  @include m.grid(repeat(3, 100vh), repeat(2, 25%) 15% 35%, none);
 }
 
-#persistencia_memoria {
+#el_platano {
   @include m.grid-span(1, 3, 1, 2);
 }
 #info-1 {
-  @include m.grid-span(3, 4, 1, 2);
+  @include m.grid-span(3, 5, 1, 3);
 }
 
-#reminiscencia {
-  @include m.grid-span(1, 3, 2, 3);
+#mao {
+  @include m.grid-span(4, 5, 2, 3);
 }
 #info-2 {
-  @include m.grid-span(3, 4, 2, 3);
+  @include m.grid-span(2, 4, 2, 3);
 }
 
-#cisnes {
-  @include m.grid-span(1, 3, 3, 4);
+#campbell {
+  @include m.grid-span(1, 4, 3, 4);
 }
 #info-3 {
-  @include m.grid-span(3, 4, 3, 4);
-}
-
-#enigma_hitler {
-  @include m.grid-span(1, 3, 4, 5);
-}
-#info-4 {
-  @include m.grid-span(3, 4, 4, 5);
-}
-
-#san_antonio {
-  @include m.grid-span(1, 3, 5, 6);
-}
-#info-5 {
-  @include m.grid-span(3, 4, 5, 6);
+  @include m.grid-span(4, 5, 3, 4);
 }
