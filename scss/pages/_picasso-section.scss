@@ -51,7 +51,7 @@
 }
 
 #guernica {
-  @include m.grid-child(pic-1, 100%, 96%);
+  @include m.grid-child(pic-1, 100%, 90%);
 }
 
 #info-1 {
@@ -88,7 +88,7 @@
 }
 
 #masacre_corea {
-  @include m.pic-info(pic-6);
+  @include m.grid-child(pic-6, 100%, 90%);
 }
 #info-6 {
   @include m.pic-info(info-6);
