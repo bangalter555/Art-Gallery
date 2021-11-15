@@ -1,0 +1,12 @@
+console.log(document.doctype);
+console.log(document.documentElement);
+console.log(document.head);
+console.log(document.characterSet);
+console.log(document.compatMode);
+console.log(document.styleSheets);
+console.log(document.anchors);
+console.log(document.body);
+console.log(document.forms);
+console.log(document.images);
+console.log(document.links);
+console.log(document.title);
